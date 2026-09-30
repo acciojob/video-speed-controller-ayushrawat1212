@@ -1,2 +1,106 @@
 
 /* Your CSS Code here. */
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #1e293b;
+        font-family: Arial, sans-serif;
+      }
+
+      .wrapper {
+        width: 90%;
+        max-width: 765px;
+        padding: 15px;
+        background: #0f172a;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .flex {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 8px;
+        background: black;
+      }
+
+      .player__button,
+      .rewind,
+      .skip {
+        padding: 10px 16px;
+        border: none;
+        border-radius: 6px;
+        background: #334155;
+        color: white;
+        font-size: 15px;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+
+      .player__button:hover,
+      .rewind:hover,
+      .skip:hover {
+        background: #475569;
+      }
+
+      .toggle {
+        font-size: 20px;
+        min-width: 50px;
+      }
+
+      .progress {
+        flex: 1;
+        height: 8px;
+        background: #475569;
+        border-radius: 10px;
+        cursor: pointer;
+        overflow: hidden;
+      }
+
+      .progress__filled {
+        width: 0%;
+        height: 100%;
+        background: #facc15;
+        border-radius: 10px;
+      }
+
+      input[type="range"] {
+        width: 100px;
+        accent-color: #facc15;
+        cursor: pointer;
+      }
+
+      label {
+        color: white;
+      }
+
+      @media (max-width: 500px) {
+        .wrapper {
+          width: 95%;
+          padding: 10px;
+          gap: 8px;
+        }
+
+        .player__button,
+        .rewind,
+        .skip {
+          padding: 8px 10px;
+          font-size: 13px;
+        }
+
+        input[type="range"] {
+          width: 75px;
+        }
+      }
